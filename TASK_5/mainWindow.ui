@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>878</width>
+    <height>562</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(13, 17, 23);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Versatile Image Viewer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Info</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="main_groupBox">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+background-color: rgb(13, 17, 23);
+border: 1.2px solid #ffffff;
+border-style: outset;
+border-radius: 15px;
+}
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: -5px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QGroupBox" name="metadata_groupBox">
+               <property name="minimumSize">
+                <size>
+                 <width>200</width>
+                 <height>200</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: black;
+border-color: transparent;</string>
+               </property>
+               <property name="title">
+                <string>Metadata</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout">
+                  <item>
+                   <spacer name="horizontalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="metadata_layout"/>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="image_box">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="3" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Resize</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QSlider" name="size_slider">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QSlider{
+    background-color: transparent;
+}
+
+QSlider::handle {
+    background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #fff, stop: 1 #424242
+        );
+	border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    margin: -15px 0px;
+    }
+
+QSlider::handle::hover{
+	border: inset;
+	 background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #bbb, stop: 1 #000
+        );}</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>160</number>
+            </property>
+            <property name="sliderPosition">
+             <number>10</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="size_lcd">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="intValue" stdset="0">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;x&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="original_label">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="resized_label">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="main_groupBox_2">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+background-color: rgb(13, 17, 23);
+border: 1.2px solid #ffffff;
+border-style: outset;
+border-radius: 15px;
+}
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: -5px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>250</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>Nearest Neighbor</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <layout class="QVBoxLayout" name="nearest_neighbor_box"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>250</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>Bilinear</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <layout class="QVBoxLayout" name="bilinear_box"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Rotate/Shear</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="main_groupBox_3">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+background-color: rgb(13, 17, 23);
+border: 1.2px solid #ffffff;
+border-style: outset;
+border-radius: 15px;
+}
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: -5px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <item>
+              <widget class="QGroupBox" name="controls_groupBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: black;
+border-color: transparent;</string>
+               </property>
+               <property name="title">
+                <string>Rotate</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_4">
+                <item row="0" column="0">
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <spacer name="horizontalSpacer_4">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_5">
+                    <item>
+                     <widget class="QPushButton" name="r_construct_button">
+                      <property name="minimumSize">
+                       <size>
+                        <width>200</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+    border-radius: 5px;
+    border-style: outset;
+    background: rgb(12, 17, 24);
+	padding: 3;
+    }
+
+QPushButton:hover {
+    background: rgb(63, 95, 127)
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background:rgb(20, 20, 20)
+    }</string>
+                      </property>
+                      <property name="text">
+                       <string>Construct</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="r_controls_widget" native="true">
+                      <layout class="QVBoxLayout" name="controls_verticalLayout">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_5">
+                         <item>
+                          <widget class="QLabel" name="label_3">
+                           <property name="text">
+                            <string>Interpolation:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="r_interpolation_comboBox">
+                           <property name="minimumSize">
+                            <size>
+                             <width>120</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QComboBox
+{
+	border-radius: 3px;
+	background-color: rgb(13, 17, 23);
+}
+
+QComboBox::drop-down
+{
+	border-left-color: transparent;
+ }
+
+QComboBox::down-arrow, QSpinBox::down-arrow, QTimeEdit::down-arrow, QDateEdit::down-arrow
+{
+     image: url(:/icons/Arrowhead-nottop-256.png);
+     width: 7px;
+     height: 6px;
+}
+
+QComboBox QAbstractItemView
+{
+    selection-background-color: transparent;
+}</string>
+                           </property>
+                           <item>
+                            <property name="text">
+                             <string>Nearest Neighbor</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Bilinear</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_6">
+                         <item>
+                          <widget class="QSlider" name="rotation_slider">
+                           <property name="minimumSize">
+                            <size>
+                             <width>200</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>200</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QSlider{
+    background-color: transparent;
+}
+
+QSlider::handle {
+    background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #fff, stop: 1 #424242
+        );
+	border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    margin: -15px 0px;
+    }
+
+QSlider::handle::hover{
+	border: inset;
+	 background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #bbb, stop: 1 #000
+        );}</string>
+                           </property>
+                           <property name="minimum">
+                            <number>-360</number>
+                           </property>
+                           <property name="maximum">
+                            <number>360</number>
+                           </property>
+                           <property name="sliderPosition">
+                            <number>0</number>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="tickPosition">
+                            <enum>QSlider::TicksBelow</enum>
+                           </property>
+                           <property name="tickInterval">
+                            <number>60</number>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLCDNumber" name="rotation_lcd">
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>24</height>
+                            </size>
+                           </property>
+                           <property name="intValue" stdset="0">
+                            <number>0</number>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="direction_label">
+                           <property name="text">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_6">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="t_box_r">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_11">
+             <item>
+              <widget class="QGroupBox" name="controls_groupBox_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: black;
+border-color: transparent;</string>
+               </property>
+               <property name="title">
+                <string>Shear</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_6">
+                <item row="0" column="0">
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <item>
+                   <spacer name="horizontalSpacer_7">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_6">
+                    <item>
+                     <widget class="QPushButton" name="s_construct_button">
+                      <property name="minimumSize">
+                       <size>
+                        <width>200</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+    border-radius: 5px;
+    border-style: outset;
+    background: rgb(12, 17, 24);
+	padding: 3;
+    }
+
+QPushButton:hover {
+    background: rgb(63, 95, 127)
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background:rgb(20, 20, 20)
+    }</string>
+                      </property>
+                      <property name="text">
+                       <string>Construct</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QWidget" name="s_controls_widget" native="true">
+                      <layout class="QVBoxLayout" name="controls_verticalLayout_2">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_11">
+                         <item>
+                          <widget class="QLabel" name="label_4">
+                           <property name="text">
+                            <string>Interpolation:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QComboBox" name="s_interpolation_comboBox">
+                           <property name="minimumSize">
+                            <size>
+                             <width>120</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QComboBox
+{
+	border-radius: 3px;
+	background-color: rgb(13, 17, 23);
+}
+
+QComboBox::drop-down
+{
+	border-left-color: transparent;
+ }
+
+QComboBox::down-arrow, QSpinBox::down-arrow, QTimeEdit::down-arrow, QDateEdit::down-arrow
+{
+     image: url(:/icons/Arrowhead-nottop-256.png);
+     width: 7px;
+     height: 6px;
+}
+
+QComboBox QAbstractItemView
+{
+    selection-background-color: transparent;
+}</string>
+                           </property>
+                           <item>
+                            <property name="text">
+                             <string>Nearest Neighbor</string>
+                            </property>
+                           </item>
+                           <item>
+                            <property name="text">
+                             <string>Bilinear</string>
+                            </property>
+                           </item>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_12">
+                         <item>
+                          <widget class="QSlider" name="shear_slider">
+                           <property name="minimumSize">
+                            <size>
+                             <width>200</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>200</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QSlider{
+    background-color: transparent;
+}
+
+QSlider::handle {
+    background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #fff, stop: 1 #424242
+        );
+	border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    margin: -15px 0px;
+    }
+
+QSlider::handle::hover{
+	border: inset;
+	 background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #bbb, stop: 1 #000
+        );}</string>
+                           </property>
+                           <property name="minimum">
+                            <number>-45</number>
+                           </property>
+                           <property name="maximum">
+                            <number>45</number>
+                           </property>
+                           <property name="sliderPosition">
+                            <number>0</number>
+                           </property>
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="tickPosition">
+                            <enum>QSlider::TicksBelow</enum>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLCDNumber" name="shear_lcd">
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>24</height>
+                            </size>
+                           </property>
+                           <property name="intValue" stdset="0">
+                            <number>0</number>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_8">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="t_box_s">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Equalization</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="equalize_button">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    border-radius: 5px;
+    border-style: outset;
+    background: rgb(12, 17, 24);
+	padding: 3;
+    }
+
+QPushButton:hover {
+    background: rgb(63, 95, 127)
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background:rgb(20, 20, 20)
+    }</string>
+            </property>
+            <property name="text">
+             <string>Equalize</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="main_groupBox_4">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+background-color: rgb(13, 17, 23);
+border: 1.2px solid #ffffff;
+border-style: outset;
+border-radius: 15px;
+}
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: -5px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <property name="title">
+           <string>Original</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <layout class="QVBoxLayout" name="original_image_box_e">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="original_histo_box">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="main_groupBox_5">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+background-color: rgb(13, 17, 23);
+border: 1.2px solid #ffffff;
+border-style: outset;
+border-radius: 15px;
+}
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: -5px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <property name="title">
+           <string>Equalized</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <layout class="QVBoxLayout" name="equalized_image_box">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="equalized_histo_box">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Spatial Filtering</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="main_groupBox_6">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+background-color: rgb(13, 17, 23);
+border: 1.2px solid #ffffff;
+border-style: outset;
+border-radius: 15px;
+}
+QGroupBox::title  {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: -5px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_12">
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="controls_groupBox_5">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: black;
+border-color: transparent;</string>
+             </property>
+             <property name="title">
+              <string>Salt and Pepper Noise</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="0" column="0">
+               <layout class="QVBoxLayout" name="verticalLayout_16">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_25">
+                  <item>
+                   <spacer name="horizontalSpacer_14">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QSpinBox" name="noise_percentage_spinBox">
+                    <property name="minimum">
+                     <number>10</number>
+                    </property>
+                    <property name="maximum">
+                     <number>100</number>
+                    </property>
+                    <property name="singleStep">
+                     <number>10</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="noise_button">
+                    <property name="minimumSize">
+                     <size>
+                      <width>200</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+    border-radius: 5px;
+    border-style: outset;
+    background: rgb(12, 17, 24);
+	padding: 3;
+    }
+
+QPushButton:hover {
+    background: rgb(63, 95, 127)
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background:rgb(20, 20, 20)
+    }</string>
+                    </property>
+                    <property name="text">
+                     <string>Add Noise</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_15">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QWidget" name="salt_controls_widget" native="true">
+                  <layout class="QVBoxLayout" name="controls_verticalLayout_6">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_23">
+                     <item>
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>Kernel Size:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSlider" name="salt_slider">
+                       <property name="minimumSize">
+                        <size>
+                         <width>200</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>200</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QSlider{
+    background-color: transparent;
+}
+
+QSlider::handle {
+    background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #fff, stop: 1 #424242
+        );
+	border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    margin: -15px 0px;
+    }
+
+QSlider::handle::hover{
+	border: inset;
+	 background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #bbb, stop: 1 #000
+        );}</string>
+                       </property>
+                       <property name="minimum">
+                        <number>1</number>
+                       </property>
+                       <property name="maximum">
+                        <number>101</number>
+                       </property>
+                       <property name="singleStep">
+                        <number>2</number>
+                       </property>
+                       <property name="pageStep">
+                        <number>2</number>
+                       </property>
+                       <property name="sliderPosition">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="tickPosition">
+                        <enum>QSlider::TicksBelow</enum>
+                       </property>
+                       <property name="tickInterval">
+                        <number>5</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLCDNumber" name="salt_lcd">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>24</height>
+                        </size>
+                       </property>
+                       <property name="intValue" stdset="0">
+                        <number>1</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="direction_label_5">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_24">
+                     <item>
+                      <spacer name="horizontalSpacer_13">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="salt_button">
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border-radius: 5px;
+    border-style: outset;
+    background: rgb(12, 17, 24);
+	padding: 3;
+    }
+
+QPushButton:hover {
+    background: rgb(63, 95, 127)
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background:rgb(20, 20, 20)
+    }</string>
+                       </property>
+                       <property name="text">
+                        <string>Apply</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="controls_groupBox_6">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: black;
+border-color: transparent;</string>
+             </property>
+             <property name="title">
+              <string>Unsharp Mask</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0">
+               <widget class="QWidget" name="r_controls_widget_3" native="true">
+                <layout class="QVBoxLayout" name="controls_verticalLayout_5">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_22">
+                   <item>
+                    <widget class="QLabel" name="label_7">
+                     <property name="text">
+                      <string>Kernel Size:   </string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSlider" name="unsharp_slider">
+                     <property name="minimumSize">
+                      <size>
+                       <width>200</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>200</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QSlider{
+    background-color: transparent;
+}
+
+QSlider::handle {
+    background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #fff, stop: 1 #424242
+        );
+	border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    margin: -15px 0px;
+    }
+
+QSlider::handle::hover{
+	border: inset;
+	 background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #bbb, stop: 1 #000
+        );}</string>
+                     </property>
+                     <property name="minimum">
+                      <number>1</number>
+                     </property>
+                     <property name="maximum">
+                      <number>101</number>
+                     </property>
+                     <property name="singleStep">
+                      <number>2</number>
+                     </property>
+                     <property name="pageStep">
+                      <number>2</number>
+                     </property>
+                     <property name="sliderPosition">
+                      <number>1</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="tickPosition">
+                      <enum>QSlider::TicksBelow</enum>
+                     </property>
+                     <property name="tickInterval">
+                      <number>5</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLCDNumber" name="unsharp_lcd">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>24</height>
+                      </size>
+                     </property>
+                     <property name="intValue" stdset="0">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="direction_label_3">
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_26">
+                   <item>
+                    <widget class="QLabel" name="label_10">
+                     <property name="text">
+                      <string>Boost Factor:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSlider" name="boost_slider">
+                     <property name="minimumSize">
+                      <size>
+                       <width>200</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>200</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QSlider{
+    background-color: transparent;
+}
+
+QSlider::handle {
+    background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #fff, stop: 1 #424242
+        );
+	border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    margin: -15px 0px;
+    }
+
+QSlider::handle::hover{
+	border: inset;
+	 background-color: qradialgradient(
+        cx: 0.7, cy: 1.4, fx: 0.7, fy: 1.4,
+        radius: 1, stop: 0 #bbb, stop: 1 #000
+        );}</string>
+                     </property>
+                     <property name="minimum">
+                      <number>1</number>
+                     </property>
+                     <property name="maximum">
+                      <number>200</number>
+                     </property>
+                     <property name="singleStep">
+                      <number>1</number>
+                     </property>
+                     <property name="pageStep">
+                      <number>1</number>
+                     </property>
+                     <property name="sliderPosition">
+                      <number>10</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="tickPosition">
+                      <enum>QSlider::TicksBelow</enum>
+                     </property>
+                     <property name="tickInterval">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLCDNumber" name="boost_lcd">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>24</height>
+                      </size>
+                     </property>
+                     <property name="intValue" stdset="0">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="direction_label_6">
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_21">
+                   <item>
+                    <spacer name="horizontalSpacer_12">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="unsharp_button">
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    border-radius: 5px;
+    border-style: outset;
+    background: rgb(12, 17, 24);
+	padding: 3;
+    }
+
+QPushButton:hover {
+    background: rgb(63, 95, 127)
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background:rgb(20, 20, 20)
+    }</string>
+                     </property>
+                     <property name="text">
+                      <string>Apply</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <layout class="QVBoxLayout" name="unsharp_box">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+            </layout>
+           </item>
+           <item row="1" column="1">
+            <layout class="QVBoxLayout" name="salt_box">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>878</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/Open-256.png</normaloff>icons/Open-256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

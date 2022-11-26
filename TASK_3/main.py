@@ -28,7 +28,7 @@ class MainPage(QMainWindow):
         self.tArr[28:49,28:99] = 255
         self.tArr[48:99,53:74] = 255
         self.image =self.tArr
-        plt.imshow(Image.fromarray(self.tArr))
+        plt.imshow(Image.fromarray(self.tArr), cmap='gray')
         plt.axis('on')
         self.canvas.draw()
 
@@ -63,7 +63,7 @@ class MainPage(QMainWindow):
                     self.rotatedImg[newY,newX]=self.oldRotatedImg[i,j]
         self.image=self.rotatedImg
         rotatedImage=Image.fromarray(self.rotatedImg)
-        plt.imshow(rotatedImage)
+        plt.imshow(rotatedImage,cmap='gray')
         plt.axis('on')
         self.canvas.draw()
         return
@@ -91,7 +91,7 @@ class MainPage(QMainWindow):
 
         shearedImg = Image.fromarray(shearedArr)
         self.image= shearedArr
-        plt.imshow(shearedImg)
+        plt.imshow(shearedImg,cmap='gray')
         plt.axis('off')
         self.canvas.draw()
         return
